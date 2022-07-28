@@ -1,11 +1,11 @@
 const qwerty = document.getElementById('qwerty');
 const phraseDiv = document.getElementById('phrase');
-const missed = 0;
+let missed = 0;
 let ul = document.querySelector('ul');
 
 const startButton = document.querySelector('a');
 const overlay = document.getElementById('overlay');
-const heart = document.querySelector('#scoreboard li'); 
+
 
 const phrasesArray = [
     "To Be Or Not To Be",
@@ -51,7 +51,7 @@ const checkLetter = button => {
     const listItems = document.querySelectorAll('#phrase li');
     for (let i = 0; i < listItems.length; i++) {
         if (button.textContent === listItems[i].textContent) {
-            listItems[i].className = 'show';
+            listItems[i].classList.add('show');
              match = button.textContent;
         } 
     }
@@ -75,9 +75,9 @@ qwerty.addEventListener('click', (e) => {
         e.target.disabled === true;
         const letter = checkLetter(e.target);
         if(letter === null) {
-            const tries = document.querySelectorAll("img");
-		    tries[missed].setAttribute("src", "images/lostHeart.png");
-		    missed++;
+           const tries = document.getElementsByTagName('img');
+           tries[missed].setAttribute('src', 'images/lostHeart.png');
+           missed++;    
          }
     } 
 });
