@@ -53,7 +53,13 @@ button {
   -webkit-transition: var(--transition);
   -o-transition: var(--transition);
   transition: var(--transition);
+  cursor: pointer;
 }
+
+button:hover{
+  background-color: yellow;
+}
+
 
 .main-container {
   display: flex;
@@ -95,6 +101,7 @@ button {
 .show {
   color: #000;
   background-color: #76CE82;
+  transition: .8s ease;  
 }
 
 /* Keyboard */
@@ -149,6 +156,7 @@ button {
 
 .win {
   background-color: var(--color-win);
+  transition: 1s ease-out;
 }
 
 .win a {
