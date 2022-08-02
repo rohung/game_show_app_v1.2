@@ -78,8 +78,10 @@ const checkWin = () => {
 
 //Listen for the start game button to be pressed
 startButton.addEventListener('click' , () => {
-    overlay.style.display = 'none';
+    overlay.className = 'hide';
 });
+
+
 
 //Listen for the onscreen keyboard to be clicked
 qwerty.addEventListener('click', (e) => {
